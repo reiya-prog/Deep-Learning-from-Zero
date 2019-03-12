@@ -42,7 +42,7 @@ def cross_entropy_error(y, t):
         t = t.argmax(axis=1)
 
     batch_size = y.shape[0]
-    return -np.sum(np.log(y[np.arrange(batch_size), t] + 1e-7))
+    return -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7))
 
 def softmax_loss(X, t):
     y = softmax(X)
